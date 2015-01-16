@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello World!
+category: Daughter
 ---
 
 Hello World!
