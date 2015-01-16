@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+---
+layout: default
+---
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">    
+      
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-    <title>Andy Yu&#39;s Blog by ukouryou</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>Andy Yu&#39;s Blog</h1>
-        <h2>andy yu </h2>
-
-        <section id="downloads">
-          <a href="https://github.com/ukouryou" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
+      <div class="entry">
+        {{ post.content | truncatewords:40}}
       </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h1>
-<a id="ukouryougithubio" class="anchor" href="#ukouryougithubio" aria-hidden="true"><span class="octicon octicon-link"></span></a>ukouryou.github.io</h1>
-
-<p>andy yu </p>
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+      
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
