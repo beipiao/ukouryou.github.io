@@ -17,6 +17,11 @@ html {
   font-size: 100%;
 }
 
+aside {
+  float: left;
+  margin: 20px;
+  padding: 5px;
+}
 body {
 	background: $white;
   font: 18px/1.4 $helvetica;
